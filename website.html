@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purnagiri General Store | Grocery Store in Lucknow</title>
+  <meta name="description" content="Purnagiri General Store - Your trusted local Kirana & Grocery Store in Lucknow. Fresh groceries, daily essentials, dairy products, snacks, and household items with free delivery within 10 km." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f6ef;
+      --bg-soft: #fffdf8;
+      --primary: #1f7a4d;
+      --primary-dark: #145c39;
+      --accent: #17211b;
+      --accent-soft: #24352b;
+      --text: #162018;
+      --muted: #5f6b63;
+      --card: rgba(255, 255, 255, 0.86);
+      --border: rgba(23, 33, 27, 0.08);
+      --shadow: 0 10px 30px rgba(17, 24, 19, 0.08);
+      --shadow-hover: 0 18px 40px rgba(17, 24, 19, 0.12);
+      --radius: 22px;
+      --radius-sm: 16px;
+      --container: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(180deg, #f7f4ea 0%, #fbfaf5 45%, #f3f7f1 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 720px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(31, 122, 77, 0.1);
+      color: var(--primary-dark);
+      border: 1px solid rgba(31, 122, 77, 0.14);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(31, 122, 77, 0.18);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #24945e 100%);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(31, 122, 77, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(31, 122, 77, 0.28);
+    }
+
+    .btn-dark {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(23, 33, 27, 0.18);
+    }
+
+    .btn-dark:hover {
+      background: #0f1511;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--accent);
+      border: 1px solid rgba(23, 33, 27, 0.08);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(23, 33, 27, 0.08);
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 246, 239, 0.78);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(23, 33, 27, 0.06);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(31, 122, 77, 0.18);
+      font-size: 1.2rem;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-text span:first-child {
+      font-size: 1.05rem;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 54px 0 40px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+      padding: 34px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(31, 122, 77, 0.11), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(20, 92, 57, 0.08), transparent 25%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 252, 244, 0.92));
+      border: 1px solid rgba(23, 33, 27, 0.06);
+      box-shadow: 0 20px 60px rgba(20, 30, 24, 0.08);
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--accent);
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .point {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(23, 33, 27, 0.07);
+      color: var(--accent-soft);
+      font-size: 0.92rem;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(17, 24, 19, 0.05);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 430px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-image-card {
+      width: 100%;
+      max-width: 500px;
+      min-height: 430px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 55px rgba(19, 30, 24, 0.14);
+      background:
+        linear-gradient(rgba(20, 30, 24, 0.18), rgba(20, 30, 24, 0.18)),
+        url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    }
+
+    .floating-card {
+      position: absolute;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(23, 33, 27, 0.08);
+      box-shadow: 0 18px 40px rgba(17, 24, 19, 0.12);
+      padding: 16px 18px;
+      color: var(--accent);
+    }
+
+    .float-top {
+      top: 22px;
+      left: -8px;
+    }
+
+    .float-bottom {
+      bottom: 22px;
+      right: -8px;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .floating-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      margin-top: 30px;
+    }
+
+    .about-card {
+      padding: 28px;
+    }
+
+    .about-card h3 {
+      font-size: 1.28rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .about-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .mini-stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(31, 122, 77, 0.06);
+      border: 1px solid rgba(31, 122, 77, 0.1);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* Services */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .service-card {
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .icon-circle {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(31, 122, 77, 0.12), rgba(31, 122, 77, 0.04));
+      color: var(--primary-dark);
+      font-size: 1.7rem;
+    }
+
+    .service-card h4 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Delivery + Payment + Policy */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .info-card {
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .info-card p,
+    .info-card li {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .info-list li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .payments {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .pay-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(31, 122, 77, 0.06);
+      border: 1px solid rgba(31, 122, 77, 0.08);
+      font-weight: 600;
+      color: var(--accent-soft);
+    }
+
+    .upi-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px dashed rgba(23, 33, 27, 0.18);
+      color: var(--accent);
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      margin-top: 34px;
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .map-card {
+      padding: 28px;
+    }
+
+    .contact-items {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(31, 122, 77, 0.05);
+      border: 1px solid rgba(31, 122, 77, 0.08);
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid rgba(23, 33, 27, 0.07);
+      flex-shrink: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      border-radius: 20px;
+    }
+
+    /* CTA Strip */
+    .cta-strip {
+      margin-top: 34px;
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--accent) 0%, #223127 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 20px 40px rgba(23, 33, 27, 0.18);
+    }
+
+    .cta-strip h3 {
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      margin-bottom: 6px;
+    }
+
+    .cta-strip p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 84px;
+      background: #111813;
+      color: #e8efe9;
+      padding: 56px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.8fr 0.8fr;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .footer-contact p {
+      color: rgba(232, 239, 233, 0.76);
+    }
+
+    .footer-links,
+    .footer-contact {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .socials a {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.25s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      color: rgba(232, 239, 233, 0.68);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-wrap,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .hero-image-card {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: none;
+        padding: 0 0 18px;
+      }
+
+      .mobile-menu.active {
+        display: grid;
+        gap: 12px;
+      }
+
+      .mobile-menu a {
+        padding: 12px 2px;
+        color: var(--muted);
+        font-weight: 600;
+        border-bottom: 1px solid rgba(23, 33, 27, 0.06);
+      }
+
+      .mobile-menu .mobile-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-top: 8px;
+      }
+
+      .about-highlight {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-wrap {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .payments {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-strip {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .float-top,
+      .float-bottom {
+        position: static;
+        margin-top: 14px;
+      }
+
+      .hero-visual {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="brand">
+          <div class="brand-logo">🛒</div>
+          <div class="brand-text">
+            <span>Purnagiri General Store</span>
+            <span>Kirana & Grocery Store</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Products</a>
+          <a href="#delivery">Delivery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="btn btn-light" href="tel:6386103734">Call Now</a>
+          <a class="btn btn-primary" href="https://wa.me/916386103734" target="_blank">WhatsApp</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#services">Products</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contact">Contact</a>
+        <div class="mobile-buttons">
+          <a class="btn btn-light" href="tel:6386103734">Call Now</a>
+          <a class="btn btn-primary" href="https://wa.me/916386103734" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrap reveal">
+          <div class="hero-content">
+            <div class="badge">Fresh • Local • Fast Delivery</div>
+            <h1>Fresh Groceries Delivered Near You</h1>
+            <p>
+              Your trusted local Kirana & Grocery Store in Lucknow. Shop quality groceries, dairy products,
+              daily essentials, snacks, and household items with smooth local delivery.
+            </p>
+
+            <div class="hero-actions">
+              <a href="tel:6386103734" class="btn btn-dark">📞 Call Now</a>
+              <a href="https://wa.me/916386103734" target="_blank" class="btn btn-primary">💬 Order on WhatsApp</a>
+            </div>
+
+            <div class="hero-points">
+              <div class="point">Free Delivery</div>
+              <div class="point">Within 10 km Radius</div>
+              <div class="point">Easy Payment Options</div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-card"></div>
+            <div class="floating-card float-top">
+              <strong>Premium Daily Essentials</strong>
+              <span>Fresh stock with reliable local service</span>
+            </div>
+            <div class="floating-card float-bottom">
+              <strong>Fast Local Delivery</strong>
+              <span>Convenient orders on call and WhatsApp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="badge">About Our Store</div>
+          <h2 class="section-title">A reliable neighborhood grocery store for your everyday needs</h2>
+          <p class="section-subtitle">
+            Purnagiri General Store is a trusted Kirana & Grocery Store in Lucknow, offering quality groceries,
+            daily essentials, dairy products, snacks, and household items. We focus on convenience, freshness,
+            and quick service for local customers.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-card reveal">
+            <h3>Quality You Can Trust</h3>
+            <p>
+              We carefully provide daily-use products that local families rely on. From staple groceries to
+              packaged foods and household goods, our goal is to make shopping easy, affordable, and dependable.
+            </p>
+
+            <div class="about-highlight">
+              <div class="mini-stat">
+                <strong>Fresh</strong>
+                <span>Groceries & dairy essentials</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Fast</strong>
+                <span>Quick local delivery support</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Easy</strong>
+                <span>Simple ordering on call or WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card about-card reveal">
+            <h3>Local Convenience, Premium Experience</h3>
+            <p>
+              Designed around customer comfort, our store combines traditional neighborhood service with modern
+              convenience. Whether you need groceries for the day or essential household supplies, we deliver a
+              smooth and friendly buying experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="badge">Services & Products</div>
+          <h2 class="section-title">Everything your home needs, all in one place</h2>
+          <p class="section-subtitle">
+            Explore our popular grocery categories for regular household shopping and essential daily supplies.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card service-card reveal">
+            <div class="icon-circle">🌾</div>
+            <h4>Groceries</h4>
+            <p>Staples, grains, pulses, flour, oil, spices, and more.</p>
+          </div>
+
+          <div class="card service-card reveal">
+            <div class="icon-circle">🧴</div>
+            <h4>Daily Essentials</h4>
+            <p>Everyday items needed for smooth home routines.</p>
+          </div>
+
+          <div class="card service-card reveal">
+            <div class="icon-circle">🥛</div>
+            <h4>Dairy Products</h4>
+            <p>Milk, curd, butter, paneer, and other fresh dairy items.</p>
+          </div>
+
+          <div class="card service-card reveal">
+            <div class="icon-circle">🍪</div>
+            <h4>Snacks & Packaged Food</h4>
+            <p>Biscuits, namkeen, noodles, beverages, and ready-to-eat items.</p>
+          </div>
+
+          <div class="card service-card reveal">
+            <div class="icon-circle">🧹</div>
+            <h4>Household Items</h4>
+            <p>Cleaning products, utility items, and daily-use home supplies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="badge">Store Information</div>
+          <h2 class="section-title">Convenient delivery, flexible payments, and simple returns</h2>
+          <p class="section-subtitle">
+            We make ordering easy with local delivery, multiple payment methods, and a customer-friendly return policy.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <div class="card info-card reveal">
+            <h3>🚚 Delivery Information</h3>
+            <ul class="info-list">
+              <li>Delivery available within 10 km radius</li>
+              <li>Free Delivery</li>
+              <li>Fast support through Call and WhatsApp orders</li>
+            </ul>
+          </div>
+
+          <div class="card info-card reveal">
+            <h3>💳 Payment Methods</h3>
+            <div class="payments">
+              <div class="pay-item">💵 Cash</div>
+              <div class="pay-item">💳 Card</div>
+              <div class="pay-item">📱 UPI</div>
+              <div class="pay-item">🏦 Net Banking</div>
+              <div class="pay-item">🧾 EMI</div>
+            </div>
+            <div class="upi-box">
+              UPI ID: 6386103734@ptaxis
+            </div>
+          </div>
+
+          <div class="card info-card reveal">
+            <h3>↩ Return Policy</h3>
+            <ul class="info-list">
+              <li>Products can be returned within 3 days</li>
+              <li>Dairy products cannot be returned</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-strip reveal">
+          <div>
+            <h3>Need groceries quickly?</h3>
+            <p>Call now or place your order on WhatsApp for fast local delivery.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="tel:6386103734" class="btn btn-light">Call Now</a>
+            <a href="https://wa.me/916386103734" target="_blank" class="btn btn-primary">Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="badge">Contact Us</div>
+          <h2 class="section-title">Visit, call, or message us anytime</h2>
+          <p class="section-subtitle">
+            Reach out for grocery orders, product availability, delivery queries, or general assistance.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card reveal">
+            <h3 style="font-size:1.3rem; color:var(--accent); margin-bottom:8px;">Purnagiri General Store</h3>
+            <p style="color:var(--muted);">Kirana & Grocery Store in Lucknow</p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong>Mobile</strong>
+                  <a href="tel:6386103734">6386103734</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/916386103734" target="_blank">6386103734</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:dheeraj.tiwararyan123@gmail.com">dheeraj.tiwararyan123@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong>Address</strong>
+                  <span>58 A Phool Bagh Colony, Kurshi Road,<br>Lucknow, Uttar Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card map-card reveal">
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps?q=58%20A%20Phool%20Bagh%20Colony,%20Kurshi%20Road,%20Lucknow,%20Uttar%20Pradesh,%20India&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; margin-bottom:14px;">
+            <div class="brand-logo">🛒</div>
+            <div class="brand-text">
+              <span style="color:#fff;">Purnagiri General Store</span>
+              <span style="color:rgba(255,255,255,0.68);">Kirana & Grocery Store</span>
+            </div>
+          </div>
+          <p>
+            Your trusted local grocery destination in Lucknow for fresh groceries, daily essentials,
+            dairy products, snacks, and household items.
+          </p>
+          <div class="socials">
+            <a href="https://wa.me/916386103734" target="_blank" aria-label="WhatsApp">💬</a>
+            <a href="tel:6386103734" aria-label="Call">📞</a>
+            <a href="mailto:dheeraj.tiwararyan123@gmail.com" aria-label="Email">✉️</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Quick Links</div>
+          <div class="footer-links">
+            <a href="#about">About Store</a>
+            <a href="#services">Products</a>
+            <a href="#delivery">Delivery & Payments</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Contact Details</div>
+          <div class="footer-contact">
+            <p>Mobile: 6386103734</p>
+            <p>WhatsApp: 6386103734</p>
+            <p>Email: dheeraj.tiwararyan123@gmail.com</p>
+            <p>58 A Phool Bagh Colony, Kurshi Road, Lucknow, Uttar Pradesh, India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Purnagiri General Store. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
